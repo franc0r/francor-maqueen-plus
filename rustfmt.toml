@@ -1,0 +1,2 @@
+# The default; stated explicitly so it doesn't silently drift with rustfmt's defaults.
+max_width = 100

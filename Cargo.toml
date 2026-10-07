@@ -1,0 +1,22 @@
+[package]
+name = "francor-maqueen-plus"
+version = "0.1.0"
+description = "Async no_std driver for the DFRobot Maqueen Plus V3 robot (I2C coprocessor, matrix lidar, NEC IR decoder, WS2812 encoder)"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/franc0r/francor-maqueen-plus"
+keywords = ["embedded", "no-std", "robot", "microbit", "dfrobot"]
+categories = ["embedded", "no-std", "hardware-support"]
+
+[dependencies]
+embedded-hal-async = "1.0"
+defmt = { version = "1", optional = true }
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1", "embedded-hal-async"] }
+embassy-futures = "0.1.2"
+
+[features]
+default = []
+defmt = ["dep:defmt"]
